@@ -1,4 +1,10 @@
 Chatoff::Application.routes.draw do
+  get "messages/index"
+
+  get "messages/create"
+
+  resources :messages
+
   devise_for :users
 
   get "home/index"
