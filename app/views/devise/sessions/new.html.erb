@@ -1,10 +1,12 @@
 <h2>Sign in</h2>
+<br/>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :username %><br />
-  <%= f.username_field :username %></div>
+  <div><%= f.label :username %>
+  <%= f.text_field :username %></div>
+  <br/>
 
-  <div><%= f.label :password %><br />
+  <div><%= f.label :password %>
   <%= f.password_field :password %></div>
 
   <% if devise_mapping.rememberable? -%>
