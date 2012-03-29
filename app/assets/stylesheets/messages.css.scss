@@ -14,16 +14,25 @@
 
   ul#chat li {
     margin: 2px 5px;
-    padding: 0;
+    padding: 2px;
   }
 
-  ul#chat li .created_at {
-    float: right;
-    color: #777;
-    font-size: 11px;
-    padding-left: 4px;
-    padding-top: 2px;
+  ul#chat li {
+    margin: 15px 15px;
+
+    .created_at {
+      float: right;
+      color: #777;
+      font-size: 11px;
+      padding-left: 4px;
+      padding-top: 2px;
+    }
+    .user {
+      color: #ff7c26;
+    }
   }
+
+
 
   input#message_content {
     width: 240px;
