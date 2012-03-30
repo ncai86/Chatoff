@@ -1,5 +1,5 @@
 <li>
-  <span class="<%= (@user_id == message.user.id)?  'user' : '' %>"><%=  message.user.username %>:</span>
+  <span class="<%= message.user.username %>"><%=  message.user.username %>:</span>
   <span class="created_at"><%= message.created_at.strftime("%H:%M") %></span>
-  <%= message.content %>  <%= message.user.id %>
+  <%= message.content %>
 </li>

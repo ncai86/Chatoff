@@ -7,5 +7,28 @@ Chatoff
 
 <%= form_for Message.new, :remote => true do |f| %>
   <%= f.text_field :content %>
-  <%= f.submit "Send" %>
+  <%= f.submit "Send", :id => 'send-button' %>
 <% end %>
+
+<script>
+
+
+    $().ready(function () {
+        $("#chat").ajaxComplete(function () {
+            $('span').each(function () {
+                if ($(this).attr('class') == '<%= current_user.username %>') {
+                    $(this).attr('class', 'user')
+                }
+            });
+        });
+
+        $('#chat span').each(function () {
+            if ($(this).attr('class') == '<%= current_user.username %>') {
+                $(this).attr('class', 'user')
+            }
+        });
+
+    });
+
+
+</script>
